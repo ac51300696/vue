@@ -338,9 +338,16 @@ const mutations = {
 				}
 			}
 		}
-		state.show.active = show
+		if (show.active == undefined) {
+			state.show.active = show
 		// console.log(show)
 		state.articles = article[show]
+		}else{
+			state.show.active = show.active
+		// console.log(show)
+		state.articles = show.articles
+		}
+		
 	},
 	DISPLAY_TOPIC (state, show) {
 		const topic = {
