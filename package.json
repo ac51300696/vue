@@ -9,7 +9,7 @@
   
     "build": "node build/dev-server.js",
     "test": "",
-    "start":"node build/dev-server.js"
+    "start":"npm install && node build/dev-server.js"
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
