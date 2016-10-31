@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    // "build": "node build/build.js",
-     "build": "node build/dev-server.js",
+  
+    "build": "node build/dev-server.js",
     "test": "",
     "start":"node build/dev-server.js"
   },
