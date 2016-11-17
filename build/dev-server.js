@@ -1,6 +1,6 @@
 require('./check-versions')()
 var config = require('../config')
-if (!process.env.NODE_ENV) process.env.NODE_ENV = config.dev.env
+if (!process.env.NODE_ENV) process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
@@ -17,17 +17,6 @@ var port = process.env.PORT || config.dev.port
 var proxyTable = config.dev.proxyTable
 
 var app = express()
-var map = {list:[1,2,3,4,5,6,7,8,9,10],allLoaded: false} 
-  
-app.get('/index',function(req, res){ //Restful Get方法,查找整个集合资源  
-    res.set({'Content-Type':'text/json','Encodeing':'utf8'});  
-    res.send(map)  
-})  
-app.get('/devices/:id',function(req, res){ 
-    res.set({'Content-Type':'text/json','Encodeing':'utf8'});  
-    res.send(map[req.param('id')])  
-    //console.log(req.param('id'))  
-})  
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

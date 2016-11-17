@@ -1,12 +1,10 @@
-import Vue from 'vue'
-import App from './App'
-import Mint from 'mint-ui'
-import store from './store'
-import 'mint-ui/lib/style.css'
-Vue.use(Mint);
-/* eslint-disable no-new */
-new Vue({
+import Vue from 'vue';
+import App from './app';
+import MuseUI from 'muse-ui'
+import 'muse-ui/dist/muse-ui.css'
+Vue.use(MuseUI)
+new Vue({ // eslint-disable-line
   el: '#app',
-  store,
   render: h => h(App)
-})
+});
+

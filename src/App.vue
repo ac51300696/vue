@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <index></index>
+    <headercop></headercop>
+    <footbar> </footbar> 
   </div>
 </template>
 
 <script>
-import index from './components/index'
-
+import headercop from './components/headercop'
+import footbar from './components/footbar'
 export default {
   name: 'app',
   components: {
-    index
+    headercop,
+    footbar
   }
 }
 </script>
@@ -22,6 +24,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
